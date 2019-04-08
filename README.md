@@ -27,7 +27,7 @@ A CharacterController that works without a RigidBody attached. Exposes optional 
 ### Collision
 * `MaxCollisions` - Limits the amount of collisions and/or Colliders that can be detected at once.
 * `InnerBias` - The higher this value the higher the startingpoint of the `Physics.CapsuleCastNonAlloc()` will be and is essential for ground-detection. `0.25f` is usually a good value to be able to detect the ground below you.
-* `GroundBias` - The higher this value the more the `Physics.CapsuleCastNonAlloc()` will cast downwards beyond the CapsuleCollider itself. This helps avoiding jittering on hard edges and `0.15f` is usually a good value.
+* `GroundBias` - The higher this value the more the `Physics.CapsuleCastNonAlloc()` will cast downwards beyond the CapsuleCollider itself. This helps avoiding jittering on hard edges and `0.15f` to `0.25f` is usually a good value.
 * `ForwardBias` - The higher this value the more the CapsuleCollider will cast forward to anticipate any walls or slopes in his direction and not run into them. `0.1f` is usually a good value but you will need to set this higher when moving very quickly.
 * `CollideWith` - A `LayerMask` that describes the layers from where colliders should be detected. Layers that are not included here can not fire any events(!!!) nor can the Controller collide with them physically(!!!).
 * `DepenetrateWith` -  A `LayerMask` that specifically states what layers the Controller should _physically_ be able to collide with. Make sure you don't collide with yourself!!!
