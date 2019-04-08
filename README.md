@@ -30,8 +30,31 @@ A CharacterController that works without a RigidBody attached. Exposes optional 
 * `GroundBias` - The higher this value the more the `Physics.CapsuleCastNonAlloc()` will cast downwards beyond the CapsuleCollider itself. This helps avoiding jittering on hard edges and `0.15f` is usually a good value.
 * `ForwardBias` - The higher this value the more the CapsuleCollider will cast forward to anticipate any walls or slopes in his direction and not run into them. `0.1f` is usually a good value but you will need to set this higher when moving very quickly.
 * `CollideWith` - A `LayerMask` that describes the layers from where colliders should be detected. Layers that are not included here can not fire any events(!!!) nor can the Controller collide with them physically(!!!).
-* `DepenetrateWith` -  A `LayerMask` that specifically states what layers the Controller should _physically_ be able to collide with.
+* `DepenetrateWith` -  A `LayerMask` that specifically states what layers the Controller should _physically_ be able to collide with. Make sure you don't collide with yourself!!!
 
 ### Events
 * `EnableColliderEvents` - Enables `OnColliderEnter`, `OnColliderStay` and `OnColliderExit` to be fired.
 * `EnableColliderEventsWith` -  A `LayerMask` that specifically states what layers should raise the `OnCollider`-events.
+
+
+# MIT License
+
+Copyright (c) 2019 k77torpedo
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
