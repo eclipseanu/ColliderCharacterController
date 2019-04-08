@@ -12,6 +12,7 @@ A CharacterController that works without a RigidBody attached. Exposes optional 
 ## The Bad
 * You need to call `Rebuild` when the scale of the Transform or its Collider-values change.
 * Hard edges that face upward might cause light jittering.
+* Made for simple games with simple surfaces (like Zelda). Complex or very detailed terrain might cause jittering.
 
 # Parameter Explanation
 ### Sleep
